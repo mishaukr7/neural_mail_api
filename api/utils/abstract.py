@@ -4,6 +4,8 @@ from ..app import db
 
 
 class TimeStampedModel(db.Model):
+    __abstract__ = True
+
     created_at = db.Column(db.DateTime)
     updated_at = db.Column(db.DateTime)
 
